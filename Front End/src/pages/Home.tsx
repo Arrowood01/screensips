@@ -63,10 +63,12 @@ const Home: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-amber-100 mb-6 leading-tight">
             Movie & TV
+            <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500">
-              {" "}Drinking Game
+              Drinking Game
             </span>
-            <br />Generator
+            <br />
+            Generator
           </h1>
           <p className="text-xl md:text-2xl text-amber-200/80 mb-12 leading-relaxed">
             Enter a title, get a hilarious drinking game + themed cocktail.
