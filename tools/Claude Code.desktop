@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Claude Code
+Comment=Launch Claude Code with IDE integration
+Exec=/home/nic/ScreenSips/tools/launch-claude.sh
+Icon=applications-development
+Terminal=true
+Categories=Development;IDE; 

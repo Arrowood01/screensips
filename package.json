@@ -1,0 +1,28 @@
+{
+  "name": "screensips-backend",
+  "version": "1.0.0",
+  "description": "Backend API for ScreenSips Movie Drinking Game Generator",
+  "main": "api/generate-game.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "@google/generative-ai": "^0.15.0"
+  },
+  "devDependencies": {
+    "vercel": "^34.0.0"
+  },
+  "keywords": [
+    "drinking-game",
+    "movie",
+    "ai",
+    "gemini",
+    "supabase"
+  ],
+  "author": "ScreenSips",
+  "license": "MIT"
+}

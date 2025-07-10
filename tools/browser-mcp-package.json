@@ -1,0 +1,16 @@
+{
+  "name": "browser-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for browser automation with Puppeteer",
+  "main": "browser-mcp-server.js",
+  "scripts": {
+    "start": "node browser-mcp-server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "puppeteer": "^21.0.0"
+  },
+  "keywords": ["mcp", "browser", "automation", "puppeteer"],
+  "author": "Your Name",
+  "license": "MIT"
+} 
