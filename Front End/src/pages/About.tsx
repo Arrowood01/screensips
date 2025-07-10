@@ -54,18 +54,10 @@ const About: React.FC = () => {
 
         <div className="bg-gradient-to-r from-orange-500/20 to-orange-600/20 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20 text-center">
           <h2 className="text-3xl font-bold text-amber-100 mb-4">Our Mission</h2>
-          <p className="text-amber-200/80 text-lg leading-relaxed mb-6">
+          <p className="text-amber-200/80 text-lg leading-relaxed">
             To transform ordinary movie nights into extraordinary social experiences through the power of AI-generated entertainment. 
             We believe that the best memories are made when people come together to laugh, drink responsibly, and enjoy great content.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="liquid-button">
-              Start Your Game
-            </button>
-            <button className="liquid-button">
-              Join Our Community
-            </button>
-          </div>
         </div>
 
         <div className="mt-12 text-center">
