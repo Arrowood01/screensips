@@ -15,14 +15,29 @@ const TipJar: React.FC = () => {
           </p>
         </div>
 
-        <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-amber-200/20 mb-8">
-          <iframe 
-            id='kofiframe' 
-            src='https://ko-fi.com/screensips/?hidefeed=true&widget=true&embed=true&preview=true' 
-            style={{border:'none', width:'100%', padding:'4px', background:'#f9f9f9'}} 
-            height='712' 
-            title='screensips'
-          />
+        <div className="bg-gradient-to-r from-orange-500/20 to-orange-600/20 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20 text-center mb-8">
+          <Coffee className="text-orange-400 mx-auto mb-4" size={48} />
+          <h2 className="text-2xl font-bold text-amber-100 mb-4">Support ScreenSips</h2>
+          <p className="text-amber-200/80 mb-6">
+            Love the games? Help us keep creating amazing drinking experiences for movie lovers everywhere.
+          </p>
+          <a
+            href="https://ko-fi.com/screensips"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-amber-100 font-semibold rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105 shadow-lg mr-4 mb-4"
+          >
+            <Coffee className="mr-3" size={24} />
+            Support on Ko-fi
+          </a>
+          <a
+            href="https://ko-fi.com/screensips"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-6 py-3 bg-slate-700/50 text-amber-200 font-medium rounded-lg hover:bg-slate-600/50 transition-all border border-amber-200/20"
+          >
+            View Our Ko-fi Page
+          </a>
         </div>
 
         <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
