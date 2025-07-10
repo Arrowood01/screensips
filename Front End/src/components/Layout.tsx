@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Info, Coffee } from 'lucide-react';
+import { Home, Info, Beer } from 'lucide-react';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -12,7 +12,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const navItems = [
     { path: '/', label: 'Home', icon: Home },
     { path: '/about', label: 'About', icon: Info },
-    { path: '/tip', label: 'Tip Jar', icon: Coffee },
+    { path: '/tip', label: 'Tip Jar', icon: Beer },
   ];
 
   const isActive = (path: string) => location.pathname === path;

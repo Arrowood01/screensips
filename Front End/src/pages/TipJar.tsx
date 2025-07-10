@@ -1,12 +1,12 @@
 import React from 'react';
-import { Coffee } from 'lucide-react';
+import { Beer } from 'lucide-react';
 
 const TipJar: React.FC = () => {
   return (
     <div className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <Coffee className="text-orange-400 mx-auto mb-4" size={64} />
+          <Beer className="text-orange-400 mx-auto mb-4" size={64} />
           <h1 className="text-4xl md:text-5xl font-bold text-amber-100 mb-4">
             Tip Jar
           </h1>
@@ -16,7 +16,7 @@ const TipJar: React.FC = () => {
         </div>
 
         <div className="bg-gradient-to-r from-orange-500/20 to-orange-600/20 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20 text-center mb-8">
-          <Coffee className="text-orange-400 mx-auto mb-4" size={48} />
+          <Beer className="text-orange-400 mx-auto mb-4" size={48} />
           <h2 className="text-2xl font-bold text-amber-100 mb-4">Support ScreenSips</h2>
           <p className="text-amber-200/80 mb-6">
             Love the games? Help us keep creating amazing drinking experiences for movie lovers everywhere.
@@ -27,7 +27,7 @@ const TipJar: React.FC = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-amber-100 font-semibold rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105 shadow-lg mr-4 mb-4"
           >
-            <Coffee className="mr-3" size={24} />
+            <Beer className="mr-3" size={24} />
             Support on Ko-fi
           </a>
           <a

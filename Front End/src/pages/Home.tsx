@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Dice6, Wine, Coffee } from 'lucide-react';
+import { Search, Dice6, Wine, Beer } from 'lucide-react';
 
 const Home: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -201,7 +201,7 @@ const Home: React.FC = () => {
             {/* Monetization Panel */}
             <div className="mt-8 bg-gradient-to-r from-orange-500/20 to-orange-600/20 backdrop-blur-lg rounded-xl p-6 border border-amber-200/20 text-center">
               <h3 className="text-xl font-semibold text-amber-100 mb-4 flex items-center justify-center">
-                <Coffee className="mr-2 text-orange-400" size={24} />
+                <Beer className="mr-2 text-orange-400" size={24} />
                 Enjoying the game? Tip the bartender
               </h3>
               <p className="text-amber-200/70 mb-4">
