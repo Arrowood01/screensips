@@ -22,7 +22,7 @@ function App() {
           <Route path="/privacy" element={<Privacy />} />
         </Routes>
       </Layout>
-      <Analytics />
+      <Analytics debug={process.env.NODE_ENV === 'development'} />
     </Router>
   );
 }
