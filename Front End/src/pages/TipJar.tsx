@@ -1,5 +1,5 @@
 import React from 'react';
-import { Coffee, Heart, Star, Gift } from 'lucide-react';
+import { Coffee } from 'lucide-react';
 
 const TipJar: React.FC = () => {
   return (
@@ -15,49 +15,14 @@ const TipJar: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-amber-200/20 text-center">
-            <Coffee className="text-orange-400 mx-auto mb-3" size={40} />
-            <h3 className="text-xl font-bold text-amber-100 mb-2">Buy Me a Coffee</h3>
-            <p className="text-amber-200/70 text-sm mb-4">Fuel the late-night coding sessions</p>
-            <button className="w-full px-4 py-2 bg-orange-500 text-amber-100 rounded-lg hover:bg-orange-600 transition-all">
-              $3
-            </button>
-          </div>
-
-          <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-amber-200/20 text-center">
-            <Heart className="text-orange-400 mx-auto mb-3" size={40} />
-            <h3 className="text-xl font-bold text-amber-100 mb-2">Show Some Love</h3>
-            <p className="text-amber-200/70 text-sm mb-4">Support our growing community</p>
-            <button className="w-full px-4 py-2 bg-orange-500 text-amber-100 rounded-lg hover:bg-orange-600 transition-all">
-              $5
-            </button>
-          </div>
-
-          <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-amber-200/20 text-center">
-            <Star className="text-orange-400 mx-auto mb-3" size={40} />
-            <h3 className="text-xl font-bold text-amber-100 mb-2">VIP Support</h3>
-            <p className="text-amber-200/70 text-sm mb-4">Help us add premium features</p>
-            <button className="w-full px-4 py-2 bg-orange-500 text-amber-100 rounded-lg hover:bg-orange-600 transition-all">
-              $10
-            </button>
-          </div>
-        </div>
-
-        <div className="bg-gradient-to-r from-orange-500/20 to-orange-600/20 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20 text-center mb-8">
-          <Gift className="text-orange-400 mx-auto mb-4" size={48} />
-          <h2 className="text-2xl font-bold text-amber-100 mb-4">Custom Amount</h2>
-          <p className="text-amber-200/80 mb-6">
-            Choose your own tip amount and help us continue creating amazing drinking games for everyone.
-          </p>
-          <a
-            href="https://ko-fi.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-amber-100 font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105"
-          >
-            Support on Ko-fi
-          </a>
+        <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-amber-200/20 mb-8">
+          <iframe 
+            id='kofiframe' 
+            src='https://ko-fi.com/screensips/?hidefeed=true&widget=true&embed=true&preview=true' 
+            style={{border:'none', width:'100%', padding:'4px', background:'#f9f9f9'}} 
+            height='712' 
+            title='screensips'
+          />
         </div>
 
         <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
