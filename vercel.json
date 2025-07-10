@@ -1,4 +1,7 @@
 {
+  "buildCommand": "cd 'Front End' && npm install && npm run build",
+  "outputDirectory": "Front End/dist",
+  "installCommand": "cd 'Front End' && npm install",
   "functions": {
     "api/generate-game.js": {
       "maxDuration": 30
