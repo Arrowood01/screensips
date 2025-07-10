@@ -23,8 +23,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <nav className="sticky top-0 z-50 backdrop-blur-lg bg-slate-800/90 border-b border-amber-200/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link to="/" className="text-2xl font-bold text-amber-100 hover:text-orange-400 transition-colors">
-              Screen Sips
+            <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+              <img 
+                src="/screensipslogo.png" 
+                alt="ScreenSips Logo" 
+                className="h-10 w-auto"
+              />
             </Link>
             
             <div className="hidden md:flex space-x-8">
