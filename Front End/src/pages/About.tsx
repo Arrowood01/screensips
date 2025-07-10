@@ -15,8 +15,8 @@ const About: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
-            <Zap className="text-orange-400 mb-4" size={48} />
+          <div className="hover-card p-8">
+            <Zap className="card-icon text-orange-400 mb-4" size={48} />
             <h3 className="text-2xl font-bold text-amber-100 mb-4">AI-Powered Fun</h3>
             <p className="text-amber-200/80 leading-relaxed">
               Our advanced AI analyzes your favorite shows and movies to create unique, 
@@ -24,8 +24,8 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
-            <Heart className="text-orange-400 mb-4" size={48} />
+          <div className="hover-card p-8">
+            <Heart className="card-icon text-orange-400 mb-4" size={48} />
             <h3 className="text-2xl font-bold text-amber-100 mb-4">Made with Love</h3>
             <p className="text-amber-200/80 leading-relaxed">
               Created by entertainment enthusiasts who believe that watching your favorite 
@@ -33,8 +33,8 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
-            <Users className="text-orange-400 mb-4" size={48} />
+          <div className="hover-card p-8">
+            <Users className="card-icon text-orange-400 mb-4" size={48} />
             <h3 className="text-2xl font-bold text-amber-100 mb-4">Community First</h3>
             <p className="text-amber-200/80 leading-relaxed">
               We're building a community of entertainment lovers who want to enhance their 
@@ -42,8 +42,8 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
-            <Sparkles className="text-orange-400 mb-4" size={48} />
+          <div className="hover-card p-8">
+            <Sparkles className="card-icon text-orange-400 mb-4" size={48} />
             <h3 className="text-2xl font-bold text-amber-100 mb-4">Always Fresh</h3>
             <p className="text-amber-200/80 leading-relaxed">
               With thousands of possible combinations and constantly updated content, 
@@ -59,10 +59,10 @@ const About: React.FC = () => {
             We believe that the best memories are made when people come together to laugh, drink responsibly, and enjoy great content.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-amber-100 font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105">
+            <button className="liquid-button">
               Start Your Game
             </button>
-            <button className="px-6 py-3 bg-slate-700/50 text-amber-100 border border-amber-200/20 font-semibold rounded-lg hover:bg-slate-700/70 transition-all">
+            <button className="liquid-button">
               Join Our Community
             </button>
           </div>

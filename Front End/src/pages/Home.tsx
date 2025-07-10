@@ -90,7 +90,7 @@ const Home: React.FC = () => {
             <button
               onClick={handleGenerate}
               disabled={!searchTerm.trim() || isLoading}
-              className="mt-4 w-full md:w-auto px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-amber-100 font-semibold rounded-xl hover:from-orange-600 hover:to-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all transform hover:scale-105 active:scale-95"
+              className="liquid-button mt-4 w-full md:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? (
                 <div className="flex items-center justify-center space-x-2">
@@ -127,7 +127,7 @@ const Home: React.FC = () => {
                   <p className="text-red-400 text-lg mb-4">{gameResult.error}</p>
                   <button
                     onClick={handleGenerate}
-                    className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-amber-100 font-semibold rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all"
+                    className="liquid-button"
                   >
                     Try Again
                   </button>
@@ -211,7 +211,7 @@ const Home: React.FC = () => {
                 href="https://ko-fi.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-amber-100 font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105"
+                className="liquid-button inline-block"
               >
                 Support on Ko-fi
               </a>
