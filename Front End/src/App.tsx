@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics, track } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -10,6 +11,14 @@ import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 
 function App() {
+  useEffect(() => {
+    // Debug log to confirm analytics is loaded
+    console.log('Vercel Analytics initialized');
+    
+    // Send a test event to verify analytics is working
+    track('app_loaded', { timestamp: new Date().toISOString() });
+  }, []);
+
   return (
     <Router>
       <Layout>
@@ -22,7 +31,8 @@ function App() {
           <Route path="/privacy" element={<Privacy />} />
         </Routes>
       </Layout>
-      <Analytics debug={process.env.NODE_ENV === 'development'} />
+      <Analytics mode="production" debug={true} />
+      <SpeedInsights />
     </Router>
   );
 }
