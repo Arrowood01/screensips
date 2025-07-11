@@ -21,54 +21,38 @@ const TypewriterAnimation: React.FC = () => {
 
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
-  const [isTyping, setIsTyping] = useState(true);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const currentPhrase = phrases[currentPhraseIndex];
     
-    if (isPaused) {
-      return;
-    }
-
-    if (isTyping && !isDeleting) {
-      // Typing phase
-      if (currentText.length < currentPhrase.length) {
-        const timeout = setTimeout(() => {
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing phase
+        if (currentText.length < currentPhrase.length) {
           setCurrentText(currentPhrase.slice(0, currentText.length + 1));
-        }, 80); // 80ms per character typing
-        return () => clearTimeout(timeout);
+        } else {
+          // Finished typing, start deleting after pause
+          setTimeout(() => {
+            setIsDeleting(true);
+          }, 1500); // 1.5 second pause after complete phrase
+        }
       } else {
-        // Finished typing, pause before deleting
-        setIsPaused(true);
-        const timeout = setTimeout(() => {
-          setIsPaused(false);
-          setIsDeleting(true);
-          setIsTyping(false);
-        }, 1500); // 1.5 second pause after complete phrase
-        return () => clearTimeout(timeout);
-      }
-    } else if (isDeleting) {
-      // Deleting phase
-      if (currentText.length > 0) {
-        const timeout = setTimeout(() => {
+        // Deleting phase
+        if (currentText.length > 0) {
           setCurrentText(currentText.slice(0, -1));
-        }, 40); // 40ms per character deletion
-        return () => clearTimeout(timeout);
-      } else {
-        // Finished deleting, pause before next phrase
-        setIsPaused(true);
-        const timeout = setTimeout(() => {
-          setIsPaused(false);
-          setIsDeleting(false);
-          setIsTyping(true);
-          setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
-        }, 300); // 300ms pause before starting next phrase
-        return () => clearTimeout(timeout);
+        } else {
+          // Finished deleting, move to next phrase after pause
+          setTimeout(() => {
+            setIsDeleting(false);
+            setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
+          }, 300); // 300ms pause before starting next phrase
+        }
       }
-    }
-  }, [currentText, isTyping, isDeleting, isPaused, currentPhraseIndex, phrases]);
+    }, isDeleting ? 40 : 80); // 40ms for deleting, 80ms for typing
+
+    return () => clearTimeout(timeout);
+  }, [currentText, isDeleting, currentPhraseIndex, phrases]);
 
   return (
     <div className="text-center">
