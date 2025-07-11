@@ -213,7 +213,7 @@ const Home: React.FC = () => {
                 Help keep the drinks flowing and support more awesome games!
               </p>
               <a
-                href="https://ko-fi.com"
+                href="https://ko-fi.com/screensips"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="liquid-button inline-block"
