@@ -21,10 +21,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen bg-slate-900">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 backdrop-blur-lg bg-slate-800/90 border-b border-amber-200/20">
+      <nav className="sticky top-0 z-50 backdrop-blur-lg bg-slate-800/90 border-b border-amber-200/20" role="navigation" aria-label="Main navigation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+            <Link to="/" className="flex items-center hover:opacity-80 transition-opacity" aria-label="ScreenSips home page">
               <img 
                 src="/screensipslogo.png" 
                 alt="ScreenSips Logo" 
@@ -54,8 +54,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <button 
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="text-amber-100 p-2"
+                aria-label={isMobileMenuOpen ? 'Close mobile menu' : 'Open mobile menu'}
+                aria-expanded={isMobileMenuOpen}
+                aria-controls="mobile-menu"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               </button>
@@ -65,8 +68,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-slate-800/95 backdrop-blur-sm">
-            <div className="px-2 pt-2 pb-3 space-y-1 border-t border-amber-200/20">
+          <div id="mobile-menu" className="md:hidden bg-slate-800/95 backdrop-blur-sm">
+            <div className="px-2 pt-2 pb-3 space-y-1 border-t border-amber-200/20" role="menu" aria-label="Mobile navigation menu">
               {navItems.map(({ path, label, icon: Icon }) => (
                 <Link
                   key={path}
@@ -87,8 +90,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         )}
       </nav>
 
+      {/* Skip to main content link */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-orange-500 text-amber-100 px-4 py-2 rounded z-50"
+      >
+        Skip to main content
+      </a>
+
       {/* Main content */}
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {children}
       </main>
 

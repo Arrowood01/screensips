@@ -2,9 +2,23 @@ import React, { useState } from 'react';
 import { Search, Dice6, Wine, Beer } from 'lucide-react';
 import TypewriterAnimation from '../components/TypewriterAnimation';
 
+interface Cocktail {
+  name: string;
+  ingredients: string[];
+  instructions: string[];
+}
+
+interface GameResult {
+  title: string;
+  tagline?: string;
+  rules: string[];
+  cocktail: Cocktail;
+  error?: string;
+}
+
 const Home: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [gameResult, setGameResult] = useState<any>(null);
+  const [gameResult, setGameResult] = useState<GameResult | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleGenerate = async () => {
@@ -43,8 +57,7 @@ const Home: React.FC = () => {
       } else {
         throw new Error(data.message || 'Failed to generate game');
       }
-    } catch (error) {
-      console.error('Error generating game:', error);
+    } catch {
       // Show error message to user
       setGameResult({
         title: searchTerm,
@@ -81,21 +94,30 @@ const Home: React.FC = () => {
 
           {/* Search Input */}
           <div className="max-w-2xl mx-auto mb-8">
+            <label htmlFor="movie-search" className="sr-only">
+              Enter movie or TV show title
+            </label>
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-amber-200/60" size={24} />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-amber-200/60" size={24} aria-hidden="true" />
               <input
+                id="movie-search"
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="e.g., The Office, Breaking Bad, Barbie"
                 className="w-full pl-12 pr-4 py-4 bg-slate-800/50 backdrop-blur-lg border border-amber-200/20 rounded-xl text-amber-100 placeholder-amber-200/60 text-lg focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-400/20 transition-all"
                 onKeyPress={(e) => e.key === 'Enter' && handleGenerate()}
+                aria-describedby="search-help"
               />
+            </div>
+            <div id="search-help" className="sr-only">
+              Enter the name of a movie or TV show to generate a drinking game
             </div>
             <button
               onClick={handleGenerate}
               disabled={!searchTerm.trim() || isLoading}
               className="liquid-button mt-4 w-full md:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
+              aria-label={isLoading ? 'Generating game, please wait' : 'Generate drinking game'}
             >
               {isLoading ? (
                 <div className="flex items-center justify-center space-x-2">
@@ -115,7 +137,7 @@ const Home: React.FC = () => {
 
       {/* Result Section */}
       {gameResult && (
-        <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <section className="py-12 px-4 sm:px-6 lg:px-8" aria-label="Generated drinking game results">
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-amber-200/20">
               <h2 className="text-3xl font-bold text-amber-100 mb-8 text-center">
@@ -133,6 +155,7 @@ const Home: React.FC = () => {
                   <button
                     onClick={handleGenerate}
                     className="liquid-button"
+                    aria-label="Try generating game again"
                   >
                     Try Again
                   </button>

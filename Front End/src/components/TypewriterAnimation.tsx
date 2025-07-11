@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, memo } from 'react';
 
-const TypewriterAnimation: React.FC = () => {
-  const phrases = [
+const TypewriterAnimation: React.FC = memo(() => {
+  const phrases = useMemo(() => [
     "May the drinks be with you.",
     "I love the smell of cocktails in the morning.",
     "Life is like a box of cocktails.",
@@ -17,7 +17,7 @@ const TypewriterAnimation: React.FC = () => {
     "So you're telling me there's a drink?",
     "We'll always have cocktails.",
     "I see drunk people."
-  ];
+  ], []);
 
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
@@ -62,6 +62,8 @@ const TypewriterAnimation: React.FC = () => {
       </p>
     </div>
   );
-};
+});
+
+TypewriterAnimation.displayName = 'TypewriterAnimation';
 
 export default TypewriterAnimation;
