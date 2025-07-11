@@ -50,7 +50,6 @@ export default async function handler(req, res) {
       .single()
 
     if (error) {
-      console.error('Database error:', error)
       return res.status(500).json({
         success: false,
         message: 'Failed to save game data'
@@ -76,7 +75,6 @@ export default async function handler(req, res) {
     })
 
   } catch (error) {
-    console.error('API error:', error)
     res.status(500).json({
       success: false,
       message: 'Internal server error'
