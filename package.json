@@ -1,27 +1,42 @@
 {
-  "name": "screensips-backend",
+  "name": "screensips",
   "version": "1.0.0",
-  "description": "Backend API for ScreenSips Movie Drinking Game Generator",
-  "main": "api/generate-game.js",
-  "type": "module",
+  "description": "AI-powered drinking game generator for movies and TV shows",
+  "private": true,
   "scripts": {
-    "dev": "vercel dev",
-    "deploy": "vercel --prod"
-  },
-  "dependencies": {
-    "@supabase/supabase-js": "^2.39.0",
-    "@google/generative-ai": "^0.15.0"
-  },
-  "devDependencies": {
-    "vercel": "^34.0.0"
+    "dev": "cd 'Front End' && npm run dev",
+    "build": "cd 'Front End' && npm run build",
+    "preview": "cd 'Front End' && npm run preview",
+    "lint": "cd 'Front End' && npm run lint",
+    "clean": "rm -rf node_modules 'Front End/node_modules' 'Front End/dist'",
+    "install:all": "npm install && cd 'Front End' && npm install",
+    "setup": "npm run install:all && npm run build",
+    "start": "npm run dev"
   },
   "keywords": [
-    "drinking-game",
-    "movie",
+    "drinking-games",
     "ai",
-    "gemini",
-    "supabase"
+    "entertainment",
+    "movies",
+    "tv-shows",
+    "cocktails",
+    "party-games"
   ],
-  "author": "ScreenSips",
-  "license": "MIT"
+  "author": "Screen Sips Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/screensips.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/screensips/issues"
+  },
+  "homepage": "https://screensips.com",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  }
 }

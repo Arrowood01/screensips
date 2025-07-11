@@ -1,96 +1,105 @@
 import React from 'react';
 import { FileText, Calendar } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Terms: React.FC = () => {
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <FileText className="text-orange-400 mx-auto mb-4" size={64} />
-          <h1 className="text-4xl md:text-5xl font-bold text-amber-100 mb-4">
-            Terms of Service
-          </h1>
-          <div className="flex items-center justify-center text-amber-200/60">
-            <Calendar className="mr-2" size={16} />
-            <span>Last updated: January 15, 2025</span>
-          </div>
-        </div>
-
-        <div className="space-y-8">
-          <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
-            <h2 className="text-2xl font-bold text-amber-100 mb-4">1. Acceptance of Terms</h2>
-            <p className="text-amber-200/80 leading-relaxed">
-              By accessing and using Screen Sips, you accept and agree to be bound by the terms and provision of this agreement. 
-              If you do not agree to abide by the above, please do not use this service.
-            </p>
+    <>
+      <SEO
+        title="Terms of Service - Screen Sips"
+        description="Read Screen Sips Terms of Service. Learn about age restrictions, responsible use, and guidelines for using our AI-powered drinking game generator."
+        keywords="terms of service, Screen Sips terms, drinking game terms, legal drinking age, responsible use, user agreement"
+        url="/terms"
+      />
+      <div className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <FileText className="text-orange-400 mx-auto mb-4" size={64} />
+            <h1 className="text-4xl md:text-5xl font-bold text-amber-100 mb-4">
+              Terms of Service
+            </h1>
+            <div className="flex items-center justify-center text-amber-200/60">
+              <Calendar className="mr-2" size={16} />
+              <span>Last updated: January 15, 2025</span>
+            </div>
           </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
-            <h2 className="text-2xl font-bold text-amber-100 mb-4">2. Age Restrictions</h2>
-            <p className="text-amber-200/80 leading-relaxed">
-              Screen Sips is intended for users who are 21 years of age or older (or the legal drinking age in your jurisdiction). 
-              By using our service, you represent and warrant that you meet these age requirements.
-            </p>
-          </div>
+          <div className="space-y-8">
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
+              <h2 className="text-2xl font-bold text-amber-100 mb-4">1. Acceptance of Terms</h2>
+              <p className="text-amber-200/80 leading-relaxed">
+                By accessing and using Screen Sips, you accept and agree to be bound by the terms and provision of this agreement. 
+                If you do not agree to abide by the above, please do not use this service.
+              </p>
+            </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
-            <h2 className="text-2xl font-bold text-amber-100 mb-4">3. Responsible Use</h2>
-            <p className="text-amber-200/80 leading-relaxed mb-4">
-              Users are expected to:
-            </p>
-            <ul className="space-y-2 text-amber-200/80">
-              <li className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
-                <span>Drink responsibly and within legal limits</span>
-              </li>
-              <li className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
-                <span>Never drink and drive</span>
-              </li>
-              <li className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
-                <span>Use the service for entertainment purposes only</span>
-              </li>
-              <li className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
-                <span>Respect other users and community guidelines</span>
-              </li>
-            </ul>
-          </div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
+              <h2 className="text-2xl font-bold text-amber-100 mb-4">2. Age Restrictions</h2>
+              <p className="text-amber-200/80 leading-relaxed">
+                Screen Sips is intended for users who are 21 years of age or older (or the legal drinking age in your jurisdiction). 
+                By using our service, you represent and warrant that you meet these age requirements.
+              </p>
+            </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
-            <h2 className="text-2xl font-bold text-amber-100 mb-4">4. Limitation of Liability</h2>
-            <p className="text-amber-200/80 leading-relaxed">
-              Screen Sips is not responsible for any consequences resulting from the use of our drinking games. 
-              Users participate at their own risk and are solely responsible for their actions and decisions while using our service.
-            </p>
-          </div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
+              <h2 className="text-2xl font-bold text-amber-100 mb-4">3. Responsible Use</h2>
+              <p className="text-amber-200/80 leading-relaxed mb-4">
+                Users are expected to:
+              </p>
+              <ul className="space-y-2 text-amber-200/80">
+                <li className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Drink responsibly and within legal limits</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Never drink and drive</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Use the service for entertainment purposes only</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Respect other users and community guidelines</span>
+                </li>
+              </ul>
+            </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
-            <h2 className="text-2xl font-bold text-amber-100 mb-4">5. Intellectual Property</h2>
-            <p className="text-amber-200/80 leading-relaxed">
-              All content generated by Screen Sips, including drinking game rules and cocktail recipes, is provided for entertainment purposes. 
-              Users may not redistribute, sell, or use our content for commercial purposes without explicit permission.
-            </p>
-          </div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
+              <h2 className="text-2xl font-bold text-amber-100 mb-4">4. Limitation of Liability</h2>
+              <p className="text-amber-200/80 leading-relaxed">
+                Screen Sips is not responsible for any consequences resulting from the use of our drinking games. 
+                Users participate at their own risk and are solely responsible for their actions and decisions while using our service.
+              </p>
+            </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
-            <h2 className="text-2xl font-bold text-amber-100 mb-4">6. Modifications</h2>
-            <p className="text-amber-200/80 leading-relaxed">
-              We reserve the right to modify these terms at any time. Users will be notified of significant changes, 
-              and continued use of the service constitutes acceptance of the modified terms.
-            </p>
-          </div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
+              <h2 className="text-2xl font-bold text-amber-100 mb-4">5. Intellectual Property</h2>
+              <p className="text-amber-200/80 leading-relaxed">
+                All content generated by Screen Sips, including drinking game rules and cocktail recipes, is provided for entertainment purposes. 
+                Users may not redistribute, sell, or use our content for commercial purposes without explicit permission.
+              </p>
+            </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
-            <h2 className="text-2xl font-bold text-amber-100 mb-4">7. Contact Information</h2>
-            <p className="text-amber-200/80 leading-relaxed">
-              For questions about these Terms of Service, please contact us through our support channels or tip jar page.
-            </p>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
+              <h2 className="text-2xl font-bold text-amber-100 mb-4">6. Modifications</h2>
+              <p className="text-amber-200/80 leading-relaxed">
+                We reserve the right to modify these terms at any time. Users will be notified of significant changes, 
+                and continued use of the service constitutes acceptance of the modified terms.
+              </p>
+            </div>
+
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
+              <h2 className="text-2xl font-bold text-amber-100 mb-4">7. Contact Information</h2>
+              <p className="text-amber-200/80 leading-relaxed">
+                For questions about these Terms of Service, please contact us through our support channels or tip jar page.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

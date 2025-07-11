@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Analytics, track } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/Layout';
 import ErrorBoundary from './components/ErrorBoundary';
 import Home from './pages/Home';
@@ -18,24 +19,26 @@ function App() {
   }, []);
 
   return (
-    <ErrorBoundary>
-      <Router>
-        <Layout>
-          <ErrorBoundary>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/tip" element={<TipJar />} />
-              <Route path="/drink-responsibly" element={<DrinkResponsibly />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/privacy" element={<Privacy />} />
-            </Routes>
-          </ErrorBoundary>
-        </Layout>
-        <Analytics mode="production" debug={true} />
-        <SpeedInsights />
-      </Router>
-    </ErrorBoundary>
+    <HelmetProvider>
+      <ErrorBoundary>
+        <Router>
+          <Layout>
+            <ErrorBoundary>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/tip" element={<TipJar />} />
+                <Route path="/drink-responsibly" element={<DrinkResponsibly />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/privacy" element={<Privacy />} />
+              </Routes>
+            </ErrorBoundary>
+          </Layout>
+          <Analytics mode="production" debug={true} />
+          <SpeedInsights />
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 }
 

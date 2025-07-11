@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Home, Info, Beer } from 'lucide-react';
-
-interface LayoutProps {
-  children: React.ReactNode;
-}
+import { LayoutProps, NavItem } from '../types';
+import { NAVIGATION } from '../utils/constants';
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const navItems = [
+  const navItems: NavItem[] = [
     { path: '/', label: 'Home', icon: Home },
     { path: '/about', label: 'About', icon: Info },
     { path: '/tip', label: 'Tip Jar', icon: Beer },
@@ -111,15 +109,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               © 2025 Screen Sips. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <Link to="/drink-responsibly" className="text-amber-200/60 hover:text-amber-100 text-sm transition-colors">
-                Drink Responsibly
-              </Link>
-              <Link to="/terms" className="text-amber-200/60 hover:text-amber-100 text-sm transition-colors">
-                Terms
-              </Link>
-              <Link to="/privacy" className="text-amber-200/60 hover:text-amber-100 text-sm transition-colors">
-                Privacy
-              </Link>
+              {NAVIGATION.footer.map(({ path, label }) => (
+                <Link 
+                  key={path}
+                  to={path} 
+                  className="text-amber-200/60 hover:text-amber-100 text-sm transition-colors"
+                >
+                  {label}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
