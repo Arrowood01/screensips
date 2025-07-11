@@ -1,5 +1,5 @@
 import React from 'react';
-import { Beer } from 'lucide-react';
+import { Beer, Server, Gamepad2, Palette } from 'lucide-react';
 
 const TipJar: React.FC = () => {
   return (
@@ -8,10 +8,10 @@ const TipJar: React.FC = () => {
         <div className="text-center mb-12">
           <Beer className="text-orange-400 mx-auto mb-4" size={64} />
           <h1 className="text-4xl md:text-5xl font-bold text-amber-100 mb-4">
-            Tip Jar
+            Fuel the Fun - Support ScreenSips
           </h1>
           <p className="text-xl text-amber-200/80 leading-relaxed">
-            We're your digital bartender. If this made your night, help keep the taps flowing.
+            Your support helps us create the ultimate drinking game experience for movie and TV lovers worldwide. Every contribution keeps the party going!
           </p>
         </div>
 
@@ -25,10 +25,10 @@ const TipJar: React.FC = () => {
             href="https://ko-fi.com/screensips"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-amber-100 font-semibold rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105 shadow-lg mr-4 mb-4"
+            className="liquid-button inline-flex items-center mr-4 mb-4"
           >
             <Beer className="mr-3" size={24} />
-            Support on Ko-fi
+            Buy Us a Round
           </a>
           <a
             href="https://ko-fi.com/screensips"
@@ -42,33 +42,32 @@ const TipJar: React.FC = () => {
 
         <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-amber-200/20">
           <h3 className="text-2xl font-bold text-amber-100 mb-6 text-center">What Your Support Helps With</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="flex items-start space-x-3">
-              <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
+          <div className="grid md:grid-cols-1 gap-6 max-w-2xl mx-auto">
+            <div className="flex items-start space-x-4">
+              <Server className="text-orange-400 mt-1 flex-shrink-0" size={24} />
               <div>
-                <h4 className="font-semibold text-amber-100 mb-1">Server Costs</h4>
-                <p className="text-amber-200/70 text-sm">Keep the AI running smoothly for everyone</p>
+                <h4 className="font-semibold text-amber-100 mb-2 flex items-center">
+                  🖥️ Server & Hosting
+                </h4>
+                <p className="text-amber-200/70">Keep our platform fast and reliable for thousands of daily players</p>
               </div>
             </div>
-            <div className="flex items-start space-x-3">
-              <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
+            <div className="flex items-start space-x-4">
+              <Gamepad2 className="text-orange-400 mt-1 flex-shrink-0" size={24} />
               <div>
-                <h4 className="font-semibold text-amber-100 mb-1">New Features</h4>
-                <p className="text-amber-200/70 text-sm">More games, better cocktails, enhanced UI</p>
+                <h4 className="font-semibold text-amber-100 mb-2 flex items-center">
+                  🎮 New Game Modes
+                </h4>
+                <p className="text-amber-200/70">Unlock exciting new drinking games and custom rule sets</p>
               </div>
             </div>
-            <div className="flex items-start space-x-3">
-              <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
+            <div className="flex items-start space-x-4">
+              <Palette className="text-orange-400 mt-1 flex-shrink-0" size={24} />
               <div>
-                <h4 className="font-semibold text-amber-100 mb-1">Community Events</h4>
-                <p className="text-amber-200/70 text-sm">Virtual game nights and competitions</p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <h4 className="font-semibold text-amber-100 mb-1">Content Creation</h4>
-                <p className="text-amber-200/70 text-sm">Enhanced AI and better game generation</p>
+                <h4 className="font-semibold text-amber-100 mb-2 flex items-center">
+                  🎨 Content & Features
+                </h4>
+                <p className="text-amber-200/70">Develop new movie/TV show integrations and premium features</p>
               </div>
             </div>
           </div>
@@ -76,10 +75,10 @@ const TipJar: React.FC = () => {
 
         <div className="mt-8 text-center">
           <p className="text-amber-200/60 mb-4">
-            Every contribution, no matter how small, helps us keep the drinks flowing and the fun going!
+            Every dollar makes a difference! Your support helps us build the best drinking game platform on the internet. Join our community of awesome supporters!
           </p>
           <p className="text-amber-200/40 text-sm">
-            Thank you for being part of the Screen Sips community 🍻
+            Cheers to being part of the Screen Sips family! 🍻
           </p>
         </div>
       </div>
