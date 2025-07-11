@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Search, Dice6, Wine, Beer } from 'lucide-react';
+import TypewriterAnimation from '../components/TypewriterAnimation';
 
 const Home: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -70,11 +71,13 @@ const Home: React.FC = () => {
             <br />
             Generator
           </h1>
-          <p className="text-xl md:text-2xl text-amber-200/80 mb-12 leading-relaxed">
+          <p className="text-xl md:text-2xl text-amber-200/80 mb-8 leading-relaxed">
             Enter a title, get a hilarious drinking game + themed cocktail.
-            <br />
-            <span className="text-orange-400 font-semibold">May the drinks be with you.</span>
           </p>
+          
+          <div className="mb-12">
+            <TypewriterAnimation />
+          </div>
 
           {/* Search Input */}
           <div className="max-w-2xl mx-auto mb-8">
