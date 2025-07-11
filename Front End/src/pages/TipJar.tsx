@@ -37,8 +37,8 @@ const TipJar: React.FC = () => {
             <div className="flex items-start space-x-4">
               <Server className="text-orange-400 mt-1 flex-shrink-0" size={24} />
               <div>
-                <h4 className="font-semibold text-amber-100 mb-2 flex items-center">
-                  🖥️ Server & Hosting
+                <h4 className="font-semibold text-amber-100 mb-2">
+                  Server & Hosting
                 </h4>
                 <p className="text-amber-200/70">Keep our platform fast and reliable for thousands of daily players</p>
               </div>
@@ -46,8 +46,8 @@ const TipJar: React.FC = () => {
             <div className="flex items-start space-x-4">
               <Gamepad2 className="text-orange-400 mt-1 flex-shrink-0" size={24} />
               <div>
-                <h4 className="font-semibold text-amber-100 mb-2 flex items-center">
-                  🎮 New Game Modes
+                <h4 className="font-semibold text-amber-100 mb-2">
+                  New Game Modes
                 </h4>
                 <p className="text-amber-200/70">Unlock exciting new drinking games and custom rule sets</p>
               </div>
@@ -55,8 +55,8 @@ const TipJar: React.FC = () => {
             <div className="flex items-start space-x-4">
               <Palette className="text-orange-400 mt-1 flex-shrink-0" size={24} />
               <div>
-                <h4 className="font-semibold text-amber-100 mb-2 flex items-center">
-                  🎨 Content & Features
+                <h4 className="font-semibold text-amber-100 mb-2">
+                  Content & Features
                 </h4>
                 <p className="text-amber-200/70">Develop new movie/TV show integrations and premium features</p>
               </div>
