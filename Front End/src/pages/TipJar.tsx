@@ -1,5 +1,5 @@
 import React from 'react';
-import { Beer } from 'lucide-react';
+import { Beer, Server, Gamepad2, Palette } from 'lucide-react';
 
 const TipJar: React.FC = () => {
   return (
@@ -35,7 +35,7 @@ const TipJar: React.FC = () => {
           <h3 className="text-2xl font-bold text-amber-100 mb-6 text-center">What Your Support Helps With</h3>
           <div className="grid md:grid-cols-1 gap-6 max-w-2xl mx-auto">
             <div className="flex items-start space-x-4">
-              <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
+              <Server className="text-orange-400 mt-1 flex-shrink-0" size={24} />
               <div>
                 <h4 className="font-semibold text-amber-100 mb-2 flex items-center">
                   🖥️ Server & Hosting
@@ -44,7 +44,7 @@ const TipJar: React.FC = () => {
               </div>
             </div>
             <div className="flex items-start space-x-4">
-              <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
+              <Gamepad2 className="text-orange-400 mt-1 flex-shrink-0" size={24} />
               <div>
                 <h4 className="font-semibold text-amber-100 mb-2 flex items-center">
                   🎮 New Game Modes
@@ -53,7 +53,7 @@ const TipJar: React.FC = () => {
               </div>
             </div>
             <div className="flex items-start space-x-4">
-              <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
+              <Palette className="text-orange-400 mt-1 flex-shrink-0" size={24} />
               <div>
                 <h4 className="font-semibold text-amber-100 mb-2 flex items-center">
                   🎨 Content & Features
