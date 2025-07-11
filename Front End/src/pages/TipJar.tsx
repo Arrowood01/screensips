@@ -1,12 +1,11 @@
 import React from 'react';
-import { Beer, Server, Gamepad2, Palette } from 'lucide-react';
+import { Beer } from 'lucide-react';
 
 const TipJar: React.FC = () => {
   return (
     <div className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <Beer className="text-orange-400 mx-auto mb-4" size={64} />
           <h1 className="text-4xl md:text-5xl font-bold text-amber-100 mb-4">
             Fuel the Fun - Support ScreenSips
           </h1>
@@ -25,18 +24,10 @@ const TipJar: React.FC = () => {
             href="https://ko-fi.com/screensips"
             target="_blank"
             rel="noopener noreferrer"
-            className="liquid-button inline-flex items-center mr-4 mb-4"
+            className="liquid-button inline-flex items-center"
           >
             <Beer className="mr-3" size={24} />
             Buy Us a Round
-          </a>
-          <a
-            href="https://ko-fi.com/screensips"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-slate-700/50 text-amber-200 font-medium rounded-lg hover:bg-slate-600/50 transition-all border border-amber-200/20"
-          >
-            View Our Ko-fi Page
           </a>
         </div>
 
@@ -44,7 +35,7 @@ const TipJar: React.FC = () => {
           <h3 className="text-2xl font-bold text-amber-100 mb-6 text-center">What Your Support Helps With</h3>
           <div className="grid md:grid-cols-1 gap-6 max-w-2xl mx-auto">
             <div className="flex items-start space-x-4">
-              <Server className="text-orange-400 mt-1 flex-shrink-0" size={24} />
+              <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
               <div>
                 <h4 className="font-semibold text-amber-100 mb-2 flex items-center">
                   🖥️ Server & Hosting
@@ -53,7 +44,7 @@ const TipJar: React.FC = () => {
               </div>
             </div>
             <div className="flex items-start space-x-4">
-              <Gamepad2 className="text-orange-400 mt-1 flex-shrink-0" size={24} />
+              <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
               <div>
                 <h4 className="font-semibold text-amber-100 mb-2 flex items-center">
                   🎮 New Game Modes
@@ -62,7 +53,7 @@ const TipJar: React.FC = () => {
               </div>
             </div>
             <div className="flex items-start space-x-4">
-              <Palette className="text-orange-400 mt-1 flex-shrink-0" size={24} />
+              <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
               <div>
                 <h4 className="font-semibold text-amber-100 mb-2 flex items-center">
                   🎨 Content & Features
